@@ -1,14 +1,17 @@
-package policy;
+package com.example.policymanagement.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
 
 @Entity
+@Table
 public class Policy {
-	private String name;
-	private @Id int id;
-	private String details;
+	@Column private String name;
+	@Id @Column private int id;
+	@Column private String details;
 	
 	
 	public String getName() {
